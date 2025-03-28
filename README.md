@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Front End Mentor Solution](https://www.frontendmentor.io/solutions/article-preview-component-hrDC3j7hhfm)
+- Solution URL: [Front End Mentor Solution](https://www.frontendmentor.io/solutions/article-preview-component-hrDC3j7hhf)
 - Live Site URL: [Live Demo](https://carlhumm.github.io/article-preview-component/)
 
 ## My process
