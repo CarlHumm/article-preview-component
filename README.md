@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Front End Mentor Solution](https://www.frontendmentor.io/solutions/article-preview-component-hrDC3j7hhfm)
+- Live Site URL: [Live Demo](https://carlhumm.github.io/article-preview-component/)
 
 ## My process
 
