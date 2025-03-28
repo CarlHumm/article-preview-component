@@ -1,0 +1,65 @@
+@use './queries' as *;
+
+.toast {
+    position:absolute;
+    width: 100%;
+    padding: 16px 32px;
+    min-height: 40px;
+    background-color: var(--grey-900);
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+    color: var(--grey-500);
+
+    &[open] {
+        display: flex;
+        align-items: center;
+    }
+
+    @include medium() {
+      bottom:unset;
+      width: auto;
+      border-radius:var(--card-radius);
+      transform:translateY(-115%) translateX(27.5%);
+
+      &::before {
+        content: "";
+        position:absolute;
+        bottom:-10px;
+        left:50%;
+        width:30px;
+        height:30px;
+        background:var(--grey-900);
+        transform:rotate(45deg) translateX(-50%) translateY(10px);
+        z-index:-1;
+        }
+    }
+   }
+
+   .social-icons {
+    display: flex;
+    margin-left: var(--spacing-300);
+    flex: 1;
+    gap: var(--spacing-200);
+    img {
+        width: 20px;
+        &:hover {
+            animation: tilt-shake 0.5s ease-in-out forwards;
+        }
+    }
+
+    @include medium() {
+        justify-content:flex-end;
+    }
+   }
+
+
+   .card {
+    container-type:inline-size;
+   }
+
+
+
+
+   
+

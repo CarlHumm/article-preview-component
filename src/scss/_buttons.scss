@@ -1,0 +1,80 @@
+
+@use './queries' as *;
+
+
+@mixin button($bg: transparent, $c: black) {
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border: 0;
+    padding: 7.9px;
+    background: $bg;
+    color: $c;
+    fill: $c;
+}
+
+.btn {
+    @include button();
+}
+
+.btn-light {
+    @include button(var(--grey-200), #6E8098);
+    z-index: 2;
+}
+
+#shareBtn {
+    position: absolute;
+    right: 30px;
+    width:32px;
+    height:32px;
+
+    &.active {
+        background: var(--grey-500);
+        fill: var(--grey-200);
+    }
+
+    &:hover, &:focus-visible {
+        background: var(--grey-500);
+        fill: var(--grey-200);
+    }
+
+    @include medium() {
+        position: relative;
+        right: unset;
+    }
+
+}
+
+@include small() {
+    .author-details:has(.toast[open]) {
+        #shareBtn {
+            position: absolute;
+            right: 30px;
+            bottom: 3.5%;
+        }
+        > :not(#shareBtn, .toast) {
+            opacity: 0.1;
+        }
+    }
+}
+
+
+#open {
+    display: block;
+}
+
+#close {
+    width: 15px;
+    height: 13px;
+    display: none;
+}
+
+.active {
+    #open {
+        display: none;
+    }
+    #close {
+        display: block;
+    }
+}

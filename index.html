@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Frontend Mentor Challenge by Carl Humm">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+<main class="wrapper place-center">
+  <section class="sr-only">
+  <h1> Challenge solution for Frontend Mentor's Article preview component</h1>
+  <h2> What's involved? </h2>
+  <p> A two column card component created with HTML/CSS/JS. The project takes advantage of basic DOM manipulation techniques in order to show/hide a modal dialog. Key features
+    include the addition of keyframe animations, as well as structuring the JavaScript code as a re-usable class component. 
+  </p>
+  <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> Coded by: <a href="https://www.linkedin.com/in/carlhumm/" aria-label="Visit LinkedIn Profile (Carl Humm)">Carl Humm</a></p>
+  </section>
+  <section class="card grid">
+    <picture>
+      <source srcset="./images/drawers.webp" media="(min-width: 600px)" >
+      <img class="cover animate:clip-zoom" src="./images/drawers.webp" alt="Green drawers livening up a minamlistic apartment" >
+    </picture>
+    <div class="card-text stack relative animate:clip-down">
+    <h3>Shift the overall look and feel by adding these wonderful 
+    touches to furniture in your home</h3>
+
+    <p>Ever been in a room and felt like something was missing? Perhaps 
+    it felt slightly bare and uninviting. I’ve got some simple tips 
+    to help you make any room feel complete. </p>
+
+  <div class="author-details flex-center">
+    <img src="./images/avatar-michelle.webp" class="avatar round" alt="Michelle">
+    <div class="stack">
+    <p class="text-bold dark-gray-blue">Michelle Appleton</p>
+    <p>28 Jun 2020</p>
+    </div>
+    <button class="btn-light round ml-auto animate:pulsate" aria-label="Toggle Share Menu" aria-controls="shareModal" aria-expanded="false" id="shareBtn">
+    <svg id="open" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+    <svg id="close" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="121.31px" height="122.876px" viewBox="0 0 121.31 122.876" enable-background="new 0 0 121.31 122.876" xml:space="preserve"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M90.914,5.296c6.927-7.034,18.188-7.065,25.154-0.068 c6.961,6.995,6.991,18.369,0.068,25.397L85.743,61.452l30.425,30.855c6.866,6.978,6.773,18.28-0.208,25.247 c-6.983,6.964-18.21,6.946-25.074-0.031L60.669,86.881L30.395,117.58c-6.927,7.034-18.188,7.065-25.154,0.068 c-6.961-6.995-6.992-18.369-0.068-25.397l30.393-30.827L5.142,30.568c-6.867-6.978-6.773-18.28,0.208-25.247 c6.983-6.963,18.21-6.946,25.074,0.031l30.217,30.643L90.914,5.296L90.914,5.296z"/></g></svg>
+    </button>
+    <dialog class="toast" id="shareModal">
+      <span class="subtitle color-light">Share </span>
+      <nav class="social-icons">
+      <a href="#" title="Share on Facebook" target="_blank"><img src="./images/icon-facebook.svg" aria-hidden="true" alt=""></a>
+      <a href="#" title="Share on Pinterest" target="_blank"><img src="./images/icon-pinterest.svg" aria-hidden="true" alt=""></a>
+      <a href="#" title="Share on Twitter" target="_blank"><img src="./images/icon-twitter.svg" aria-hidden="true" alt=""></a>
+      </nav>
+    </dialog>
+    </div>
+  </div>
+  </section>
+</main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

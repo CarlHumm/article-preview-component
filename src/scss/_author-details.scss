@@ -1,0 +1,28 @@
+@use './queries' as *;
+
+.author-details {
+    --stack-space: var(--spacing-600);
+    gap: 1rem;
+    min-height:52px;
+    button {
+        z-index: 1;
+    }
+
+    p {
+        letter-spacing: 0.0012em;
+        line-height: 140%;
+    &:last-of-type  {
+        color: var(--grey-400);
+        font-weight: var(--font-w-regular);
+    }
+    }
+
+    @include medium {
+        --stack-space: var(--spacing-300);
+    }
+
+}
+
+.author-details .stack {
+    --stack-space: 0rem;
+}

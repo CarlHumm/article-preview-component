@@ -1,0 +1,163 @@
+@use './reset';
+@use './variables' as *;
+@use './fonts';
+@use './queries' as *;
+@use './animations';
+
+
+// Blocks
+@use './card';
+@use './author-details';
+@use './toast';
+@use './buttons';
+
+
+
+// Global 
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    }
+
+body {
+background-color: var(--grey-200);
+overflow:hidden;
+font-family: var(--font-f);
+line-height: 1.4;
+color: var(--grey-500);
+font-size: var(--font-s-base);
+font-weight: var(--font-w-regular);
+}
+
+:focus, :focus-visible {
+    outline-color: hsl(216, 44%, 51%);
+    outline-offset: 0.25rem;
+  }
+  
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    color: var(--grey-900);
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: var(--font-s-large);
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.stack > * {
+    margin-block-start: 0;
+}
+
+.stack > * + * {
+    margin-block-start: var(--stack-space, 1em);
+}
+
+.wrapper {
+    padding-inline-start: var(--page-gutter, 1rem);
+    padding-inline-end: var(--page-gutter, 1rem);
+    @include medium() {
+    --page-gutter: 2rem;
+    }
+    @include large() {
+    --page-gutter: 0;
+    }
+}
+
+.flex-center {
+    display: flex;
+    align-items:center;
+}
+
+// Utility
+
+.round {
+    border-radius: 50%;
+}
+
+.text-bold {
+    font-weight: var(--font-w-bold);
+}
+
+.place-center {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mt-3 {
+margin-block-start: var(--spacing-600);
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.ml-1 {
+    margin-left: 1.5rem;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.relative {
+    position: relative;
+}
+
+.cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.subtitle {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--grey-200);
+    
+}
+
+// Colors
+
+.dark-gray-blue {
+    color: var(--grey-900);
+}
+
+.faded-dark-blue {
+    color: var(--grey-500);
+}
+
+.gray-blue {
+    color: var(--grey-400);
+}
+
+.light-gray-blue {
+    color: var(--grey-200);
+}
+
+
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+
+
+
